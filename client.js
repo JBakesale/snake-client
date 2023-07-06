@@ -13,6 +13,19 @@ const connect = function () {
   conn.on("data", (data) => {
     console.log(data);
   });
+
+ conn.on("connect", () => {
+   console.log("Client connection successful");
+ });
+
+ conn.on("connect", () => {
+  conn.write("Name: JDB");
+ })
+
+
+
+
+
   return conn;
 };
 
