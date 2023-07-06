@@ -8,29 +8,37 @@ const handleUserInput = (input) => {
     process.exit();
   }
 
-  if (input === "\u0077") {
+  if (input === "w") {
     setTimeout(() => {
       connection.write("Move: up");
     }, 50);
   }
 
-  if (input === "\u0061") {
+  if (input === "a") {
     setTimeout(() => {
       connection.write("Move: left");
     }, 50);
   }
 
-  if (input === "\u0073") {
+  if (input === "s") {
     setTimeout(() => {
       connection.write("Move: down");
     }, 50);
   }
 
-  if (input === "\u0064") {
+  if (input === "d") {
     setTimeout(() => {
       connection.write("Move: right");
     }, 50);
   }
+
+if (input === "p") {
+connection.write("Say: Immmm a pirate!");
+}
+
+if (input === "o") {
+  connection.write("Say: ahoy ye mateey");
+}
 };
 
 
