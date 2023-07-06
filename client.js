@@ -14,17 +14,21 @@ const connect = function () {
     console.log(data);
   });
 
- conn.on("connect", () => {
-   console.log("Client connection successful");
- });
+  const move = (direction, time) => {
+    setTimeout(() => {
+      conn.write(`Move: ${direction}`);
+    }, time * 1000);
+  };
 
- conn.on("connect", () => {
-  conn.write("Name: JDB");
- })
-
-
-
-
+  conn.on("connect", () => {
+    console.log("Client connection successful");
+    conn.write("Name: JDB");
+    // move("up", 0);
+    // move("up", 1);
+    // move("left", 2);
+    // move("left", 3);
+    // move("down", 4);
+  });
 
   return conn;
 };
