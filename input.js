@@ -32,15 +32,14 @@ const handleUserInput = (input) => {
     }, 50);
   }
 
-if (input === "p") {
-connection.write("Say: Immmm a pirate!");
-}
+  if (input === "p") {
+    connection.write("Say: Immmm a pirate!");
+  }
 
-if (input === "o") {
-  connection.write("Say: ahoy ye mateey");
-}
+  if (input === "o") {
+    connection.write("Say: ahoy ye mateey");
+  }
 };
-
 
 const setupInput = (conn) => {
   connection = conn;
